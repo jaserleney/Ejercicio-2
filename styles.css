@@ -1,6 +1,5 @@
 :root {
   --main-color: #e61f1c;
-  --center-div: 0 auto;
 }
 
 * {
@@ -11,6 +10,11 @@
 
 body {
   font-family: "Raleway", sans-serif;
+  background-image: url(./5086.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 img {
@@ -34,22 +38,91 @@ img {
   margin: 0 auto;
 }
 
-.card-img img {
+.card:hover img {
+  filter: hue-rotate(0);
+  filter: hsl(0, 100%, 50%);
+}
+
+.card-img {
+  position: relative;
   margin: 0 auto;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 0.75rem;
+}
+
+.card-img img {
+  width: 100%;
+  height: auto;
   border-radius: 0.5rem;
 }
 
-.card-text {
+.card-img .card-text {
   position: absolute;
-  top: 88%;
-  width: 70%;
+  top: 95%;
   text-align: center;
   font-family: "Raleway";
   font-weight: 800;
   color: #fff;
-  padding: 0.25rem;
+  padding: 0.3rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;
+  width: 90%;
   font-size: 1.25rem;
   background-color: var(--main-color);
+}
+
+.info-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-card .info-text {
+  font-family: "Raleway";
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 300;
+  width: 80%;
+  padding: 0.25rem;
+}
+
+.info-card .info-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tachado {
+  text-decoration: line-through;
+  color: var(--main-color);
+}
+
+.price {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.pedir {
+  display: block;
+  width: 6rem;
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: var(--main-color);
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  margin: 0 auto;
+  margin-left: 0.5rem;
 }
