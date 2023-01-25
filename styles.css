@@ -39,8 +39,22 @@ img {
 }
 
 .card:hover img {
-  filter: hue-rotate(0);
-  filter: hsl(0, 100%, 50%);
+  filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%)
+    hue-rotate(-50deg) saturate(400%) contrast(2);
+}
+
+.card:hover .info-text {
+  display: block;
+  position: absolute;
+  top: -20rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.card:hover .card-img {
+  margin-bottom: 2rem;
 }
 
 .card-img {
@@ -89,7 +103,7 @@ img {
   font-family: "Raleway";
   text-align: left;
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 500;
   width: 80%;
   padding: 0.25rem;
 }
@@ -115,6 +129,7 @@ img {
 .pedir {
   display: block;
   width: 6rem;
+  cursor: pointer;
   font-family: "Raleway";
   font-weight: 800;
   font-size: 0.9rem;
@@ -125,4 +140,41 @@ img {
   padding: 0.25rem;
   margin: 0 auto;
   margin-left: 0.5rem;
+}
+
+.text-descuento {
+  z-index: 999;
+  position: absolute;
+  top: 3%;
+  left: 64.6%;
+  font-family: "Raleway";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.material-symbols-outlined {
+  display: flex;
+  flex-direction: row;
+  font-weight: 800;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 1.25rem;
+  border-radius: 100%;
+}
+.descuento {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway";
+  font-weight: 800;
+  background-color: var(--main-color);
+  color: #fff;
+  margin-left: -1rem;
+  padding: 1.25rem;
+  max-width: 80%;
+  max-height: 3rem;
+  text-align: center;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
