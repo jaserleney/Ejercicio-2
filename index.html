@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="card-container">
     <div class="card">
       <div class="card-img">
         <div class="text-descuento">
@@ -30,18 +30,74 @@
           <span>MILANESA DE POLLO + BEBIDA PERSONAL</span>
         </div>
       </div>
-      <div class="info-card">
-        <div class="info-text">
-          <span>Milanesa de pollo apanada * arroz * papa francesa *ensalada *bebida personal</span>
-        </div>
-        <div class="info-price">
-          <span class="tachado">antes $32.950 </span><span class="price">| Ahora $22.950</span><button
-            class="pedir">Pedir</button>
-        </div>
+      <div class="info-text">
+        <span>Milanesa de pollo apanada + arroz + papa francesa + ensalada + bebida personal</span>
       </div>
+    </div>
+    <div class="info-price">
+      <span class="tachado">antes $32.950 </span><span class="price">| Ahora $22.950</span><button
+        class="pedir">Pedir</button>
     </div>
   </div>
 
+  <dialog class="modal">
+    <div class="modal-container">
+      <div class="close">
+        <span class="material-symbols-outlined">
+          close
+        </span>
+      </div>
+      <div class="modal-img">
+        <span>Inicio > Promociones > Milanesa + Bebida</span>
+        <div class="card-img">
+          <div class="text-descuento">
+            <span class="material-symbols-outlined">
+              new_releases
+            </span><span class="descuento">25%dcto</span>
+          </div>
+          <img src="images/pollo.jpeg" alt="milanesa-bebida">
+        </div>
+      </div>
+      <div class="modal-info">
+        <div class="title">
+          <h3>MILANESA DE POLLO + BEBIDA PERSONAL</h3>
+        </div>
+        <div class="info">
+          <span>Milanesa de pollo apanada + arroz + papa francesa + ensalada + bebida personal</span>
+          <div class="info-price ">
+            <span class="tachado font-black">antes $32.950 </span><span class="price font-red">| Ahora $22.950</span>
+          </div>
+        </div>
+        <div class="form">
+          <h4>PERSONALIZA TU SELECCION</h4>
+          <select name="cubiertos" D>
+            <option selected="selected">Deseas incluir cubiertos? (Obligatorio)*</option>
+            <option value="si">Si</option>
+            <option value="no">No</option>
+          </select>
+          <select name="cubiertos">
+            <option selected="selected">Elige la bebida de tu combo? (Obligatorio)*</option>
+            <option value="coca-cola">Coca - Cola</option>
+            <option value="pepsi">Pepsi</option>
+            <option value="colombiana">Colombiana</option>
+          </select>
+          <textarea placeholder="Observaciones"></textarea>
+        </div>
+        <div class="controls">
+          <div class="increment">
+            <button id="reduce">-</button>
+            <span id="cantidad">0</span>
+            <button id="increment">+</button>
+          </div>
+          <button class="agregar">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+
+
+  <script src="./app.js"></script>
 </body>
 
 </html>

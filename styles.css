@@ -10,7 +10,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  background-image: url(./5086.jpg);
+  background-image: url(images/5086.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,7 +22,10 @@ img {
   height: auto;
 }
 
-.container {
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 90%;
   margin: 20px auto;
 }
@@ -41,13 +44,12 @@ img {
 .card:hover img {
   filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%)
     hue-rotate(-50deg) saturate(400%) contrast(2);
-  transition: all 0.3s ease-in-out;
 }
 
 .card:hover .info-text {
   display: block;
   position: absolute;
-  top: -20rem;
+  top: 12rem;
   color: #fff;
   text-align: center;
   font-weight: 800;
@@ -56,7 +58,6 @@ img {
 
 .card:hover .card-img {
   margin-bottom: 2rem;
-  transition: all 0.3s ease-in-out;
 }
 
 .card-img {
@@ -93,24 +94,18 @@ img {
   background-color: var(--main-color);
 }
 
-.info-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-card .info-text {
+.info-text {
   font-family: "Raleway";
   text-align: left;
   font-size: 0.9rem;
   font-weight: 500;
-  width: 80%;
+  width: 70%;
   padding: 0.25rem;
 }
 
-.info-card .info-price {
+.info-price {
+  margin: 0.5rem auto;
+  padding: 0.5;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -181,23 +176,180 @@ img {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
+.modal {
+  z-index: 9999;
+  border: none;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-image: url(images/5086.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.modal-container {
+  margin: 0.5rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.modal-img,
+.modal-info {
+  width: 49%;
+  padding: 0.25rem;
+  margin: 1rem auto;
+}
+
+.modal-img > span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0.5rem auto;
+  color: var(--main-color);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+.form * {
+  width: 95%;
+  padding: 0.5rem;
+}
+.form textarea {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  margin: 1rem auto;
+  height: 5em;
+  font-size: 1rem;
+  resize: none;
+}
+
+.form h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.form select,
+.form option {
+  color: var(--main-color);
+  background-color: transparent;
+  border-radius: 0.25rem;
+  margin: 0.15rem auto;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.title {
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 1.5rem 0.5rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  margin: 1.5rem auto;
+}
+
+.title h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.font-black {
+  color: #000;
+  margin: 1rem 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.font-red {
+  color: var(--main-color);
+  margin: 1rem 0.25rem;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.info {
+  width: 94%;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem auto;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.controls .increment {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: transparent;
+  margin: 1rem auto;
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: 30%;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: 0.2rem solid var(--main-color);
+}
+
+.controls .increment button {
+  color: var(--main-color);
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 0.3rem;
+  cursor: pointer;
+  margin: 0 0.75rem;
+}
+
+.controls .agregar {
+  width: 50%;
+  cursor: pointer;
+  margin: 1rem auto;
+  border: 1px solid transparent;
+  font-weight: 900;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 0.5rem 4rem;
+  font-size: 2rem;
+  background-color: #a41310;
+  color: #fff;
+}
+.controls .agregar:hover {
+  background-color: #db2926;
+  transition: all 0.3s ease-in-out;
+}
+
+.close {
+  font-size: 1rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
 @media (max-width: 1030px) {
   .card-img .card-text {
-    font-size: 1rem;
-  }
-  .info-card {
-    /* background-color: red; */
-    margin-top: 2rem;
+    font-size: 0.5rem;
   }
 }
 
 @media (max-width: 570px) {
   .card-img .card-text {
     font-size: 0.7em;
-  }
-  .info-card {
-    /* background-color: red; */
-    margin-top: 1rem;
   }
 }
 
