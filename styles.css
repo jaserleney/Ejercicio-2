@@ -41,6 +41,7 @@ img {
 .card:hover img {
   filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%)
     hue-rotate(-50deg) saturate(400%) contrast(2);
+  transition: all 0.1s ease-in-out;
 }
 
 .card:hover .info-text {
@@ -55,6 +56,7 @@ img {
 
 .card:hover .card-img {
   margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .card-img {
@@ -146,7 +148,7 @@ img {
   z-index: 999;
   position: absolute;
   top: 3%;
-  left: 64.6%;
+  right: 0;
   font-family: "Raleway";
   display: flex;
   flex-direction: row;
@@ -177,4 +179,38 @@ img {
   max-height: 3rem;
   text-align: center;
   border-radius: 0 0.5rem 0.5rem 0;
+}
+
+@media (max-width: 1030px) {
+  .card-img .card-text {
+    font-size: 1rem;
+  }
+  .info-card {
+    /* background-color: red; */
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .card-img .card-text {
+    font-size: 0.7em;
+  }
+  .info-card {
+    /* background-color: red; */
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .card:hover .info-text {
+    top: -15rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .card:hover .info-text {
+    top: -10rem;
+    font-size: 0.7rem;
+  }
 }
