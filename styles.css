@@ -10,7 +10,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  background-image: url(./5086.jpg);
+  background-image: url(images/5086.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,13 +38,13 @@ img {
   margin: 0 auto;
 }
 
-.card:hover img {
+.card-img:hover img {
   filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%)
     hue-rotate(-50deg) saturate(400%) contrast(2);
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover .info-text {
+.card-img:hover .info-text {
   display: block;
   position: absolute;
   top: -20rem;
@@ -54,7 +54,7 @@ img {
   font-size: 1.1rem;
 }
 
-.card:hover .card-img {
+.carcard-img:hover .card-img {
   margin-bottom: 2rem;
   transition: all 0.3s ease-in-out;
 }
