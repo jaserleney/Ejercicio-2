@@ -41,7 +41,7 @@ img {
 .card:hover img {
   filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%)
     hue-rotate(-50deg) saturate(400%) contrast(2);
-  transition: all 0.1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .card:hover .info-text {
